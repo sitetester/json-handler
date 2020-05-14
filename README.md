@@ -1,1 +1,2 @@
-Simple class to convert Scala case class (including nested ones) into JSON with proper indentation
+- Simple class to convert Scala case class (including nested ones) into JSON with proper indentation
+- Look into JsonHandlerSpec.scala for example usage
