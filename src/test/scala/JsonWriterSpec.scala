@@ -1,7 +1,7 @@
-import json.JsonHandler
+import json.JsonWriter
 import org.scalatest.flatspec.AnyFlatSpec
 
-class JsonHandlerSpec extends AnyFlatSpec {
+class JsonWriterSpec extends AnyFlatSpec {
 
   "a case class" should "return json" in {
 
@@ -10,7 +10,7 @@ class JsonHandlerSpec extends AnyFlatSpec {
                     age: Int = 30,
                     dob: String = "1985-01-25")
 
-    val json = new JsonHandler().toJson(User("admin", "demo"))
+    val json = JsonWriter.write(User("admin", "demo"))
     println(json)
 
     val lines = json.split("\n")
@@ -27,7 +27,7 @@ class JsonHandlerSpec extends AnyFlatSpec {
                                dob: String,
                                contact: Contacts)
 
-    val json = new JsonHandler().toJson(
+    val json = JsonWriter.write(
       UserWithContact(
         "admin",
         "demo",

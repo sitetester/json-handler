@@ -1,8 +1,9 @@
 package json
 
-class JsonHandler {
+object JsonWriter {
 
-  def toJson(obj: Any, tabCount: Int = 2): String = {
+  def write(obj: Any, tabCount: Int = 2): String = {
+
     val fieldInfo = obj.getClass.getDeclaredFields.map(f => {
       f.setAccessible(true)
 
@@ -37,7 +38,7 @@ class JsonHandler {
       case i: String if i.contains("int")    => s"$value"
       case x: String                         =>
         // println("\nx = " + x + "x.getClass = " + x.getClass + "\n\n")
-        toJson(value, tabCount * 2)
+        JsonWriter.write(value, tabCount * 2)
     }
   }
 }
