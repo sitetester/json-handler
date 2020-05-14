@@ -2,8 +2,19 @@
 - Look into JsonHandlerSpec.scala for example usage
 
 
-Sample output: 
 ```
+val json = new JsonHandler().toJson(
+      UserWithContact(
+        "admin",
+        "demo",
+        30,
+        "1985-01-25",
+        Contacts("test@yahoo.com", Phone("111-3432432", "222-4353465"))
+      )
+    )
+
+println(json)
+ 
 {
   "username" = "admin"
   "pass" = "demo"
