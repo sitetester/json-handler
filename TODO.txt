@@ -1,1 +1,2 @@
 - Next convert json into given case classes also
+- Make a separate JSON pretty prettier
