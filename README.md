@@ -1,0 +1,1 @@
+Simple class to convert Scala case class (including nested ones) into JSON with proper indentation
