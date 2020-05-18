@@ -3,7 +3,7 @@
 
 
 ```
-val json = new JsonHandler().toJson(
+val json = JsonWriter.write(
       UserWithContact(
         "admin",
         "demo",
